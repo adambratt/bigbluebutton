@@ -1,107 +1,127 @@
+@font-face {
+   src: url("MyriadWebPro.ttf");
+   fontFamily: myriad;
+   embedAsCFF: true; 
+}
+
 Application 
 {  
-   backgroundColors: #000000,#3f3f3f;
-   backgroundImage: Embed(source="assets/img/bk3.jpg");
+   themeColor: #335883;
+   backgroundColor: #335883;
    backgroundSize: "100%";
-   backgroundGradientColors: #B4BFCF, #78829C;
-   themeColor: #0094C7;
-   backgroundGradientAlphas: 0.62, 0.26;
+   backgroundImage: Embed(source="assets/img/wood.jpg");
+   backgroundGradientColors: #558309, #335e83;
 }
 
-/*The image for your logo is 200x200 pixels. No other size is currently supported so resize your logo accordingly. The logo will always appear in the lower right corner. */
-BrandingLogo
-{
-	backgroundImage: Embed(source="assets/img/BBBLogo.png");
-	backgroundSize: "100%";
+ApplicationControlBar {
+   fillAlphas: 1, 0.8;
+   fillColors: #5583a9, #335e83;
+   backgroundColor: #335e83;
+   cornerRadius: 0;
+   paddingLeft: 10px;
+   paddingRight: 10px;
+   highlightAlphas: 0.1, 0;
 }
 
 
-MDICanvas 
-{
-	backgroundColor: #0094C7;
+BrandingLogo {
+        backgroundImage: Embed(source="assets/img/market.png");
+        backgroundSize: "100%";
+}
+
+
+MDICanvas {
 	backgroundAlpha: 0;
 }
 
+Button {
+   fontFamily: myriad;
+   fillColors: #fefefe, #eeeeee;
+   fillAlphas: 1, 1;
+   borderColor: #443388;
+   borderStyle: solid;
+   borderAlpha: 0.7;
+   borderThickness: 1;
+   cornerRadius: 3;
+   highlightAlphas: 0.1, 0.0;
+   paddingTop: 1;
+   paddingLeft: 3;
+   paddingRight: 3;
+}
 
-Button 
-{
-   highlightAlphas: 1, 0.33;
-   fillAlphas: 1, 0.16, 0.18, 1;
-   fillColors: #5f89b9, #697182, #ffffff, #eeeeee;
+.sendBtn {
+   color: red;
+   backgroundColor: blue;
 }
 
 
-.mdiWindowFocus 
-{
-	headerHeight: 26;
-	roundedBottomCorners: true;
-	backgroundAlpha: 1;
-	backgroundColor: #FFFFFF;
-	backgroundImage: Embed(source="assets/swf/Blue.swf", symbol="Window_Background");
-	backgroundSize: '100%';
-	
-	borderStyle: solid;
-	borderColor: #ffffff;
-	borderAlpha: 1;
-	borderThickness: 2;
-	borderThicknessLeft: 0;
-	borderThicknessTop: 0;
-	borderThicknessBottom: 0;
-	borderThicknessRight: 0;
-	cornerRadius: 4;
-	dropShadowEnabled: false;
-	titleStyleName: "mypanelTitle";
-	
-	cornerResizeImg: Embed(source="assets/swf/Blue.swf", symbol="Corner_Resize");
-	cornerResizeWidth: 15;
-	cornerResizeHeight: 15;
-	cornerResizePaddingRight: 2;
-	cornerResizePaddingBottom: 2;
-	
-	controlButtonWidth: 10;
-	controlButtonHeight: 10;
-	controlButtonGap: 4;
+LinkButton {
+   color: #ffffff;
+   backgroundColor: blue;
+}
+
+ScrollBar {
+	fillColors: #ffffff, #cccccc;
+	highlightAlphas: 0.1, 0;
+	trackColors: #cccccc, #dddddd;
+}
+
+MDIWindow {
+   borderColor: #dddddd;
+   borderAlpha: 1;
+   borderThicknessLeft: 8;
+   borderThicknessTop: 2;
+   borderThicknessBottom: 2;
+   borderThicknessRight: 8;
+   roundedBottomCorners: true;
+   highlightAlphas: 0.1, 0;
+   headerColors: #5583a9, #436e93;
+   footerColors: #5583a9, #335e83;
+   backgroundColor: #cccccc;
+   dropShadowEnabled: true;
+   shadowDistance: 2;
+   titleStyleName: "mypanelTitle";
+   paddingTop: 6;
+}
+
+.mdiWindowFocus {
+    headerHeight: 36;
 }
 
 .mdiWindowNoFocus 
 {
-	headerHeight: 26;
-	roundedBottomCorners: true;
-	backgroundAlpha: 0.5;
-	backgroundImage: Embed(source="assets/swf/Blue.swf", symbol="Window_Background");
-	backgroundSize: '100%';
-	
-	borderStyle: solid;
-	borderColor: #ffffff;
-	borderAlpha: 1;
-	borderThickness: 2;
-	borderThicknessLeft: 0;
-	borderThicknessTop: 0;
-	borderThicknessBottom: 0;
-	borderThicknessRight: 0;
-	cornerRadius: 4;
+	headerHeight: 36;
 	dropShadowEnabled: false;
-	titleStyleName: "mypanelTitle";
-	
-	cornerResizeImg: Embed(source="assets/swf/Blue.swf", symbol="Corner_Resize");
-	cornerResizeWidth: 15;
-	cornerResizeHeight: 15;
-	cornerResizePaddingRight: 2;
-	cornerResizePaddingBottom: 2;
-	
-	controlButtonWidth: 10;
-	controlButtonHeight: 10;
-	controlButtonGap: 4;
+	backgroundAlpha: 1;
+	borderAlpha: 1;
 }
 
 .mypanelTitle 
 {
-	fontFamily: Arial;
+	fontFamily: myriad;
 	fontSize: 12;
 	fontWeight: bold;
-	color: #ffffff;
+	color: #f3f3f3;
+        verticalAlign: 6;
+	textIndent: 5;
 }
 
+
+.minimizeBtnFocus 
+{
+	upSkin:        Embed('assets/img/3_minimizeButton.png');
+	overSkin:      Embed('assets/img/3_minimizeButton.png');
+	downSkin:      Embed('assets/img/3_minimizeButton.png');
+	disabledSkin:  Embed('assets/img/3_minimizeButton.png');
+}
+
+.minimizeBtnNoFocus 
+{
+	upSkin:        Embed('assets/img/3_minimizeButton.png');
+	overSkin:      Embed('assets/img/3_minimizeButton.png');
+	downSkin:      Embed('assets/img/3_minimizeButton.png');
+	disabledSkin:  Embed('assets/img/3_minimizeButton.png');
+}
 
 .closeBtnFocus
 {
@@ -118,7 +138,6 @@ Button
 	downSkin:      Embed('assets/img/3_closeButton.png');
 	disabledSkin:  Embed('assets/img/3_closeButton.png');
 }
-
 
 .increaseBtnFocus
 {
@@ -154,23 +173,6 @@ Button
 }
 
 
-.minimizeBtnFocus 
-{
-	upSkin:        Embed('assets/img/3_minimizeButton.png');
-	overSkin:      Embed('assets/img/3_minimizeButton.png');
-	downSkin:      Embed('assets/img/3_minimizeButton.png');
-	disabledSkin:  Embed('assets/img/3_minimizeButton.png');
-}
-
-.minimizeBtnNoFocus 
-{
-	upSkin:        Embed('assets/img/3_minimizeButton.png');
-	overSkin:      Embed('assets/img/3_minimizeButton.png');
-	downSkin:      Embed('assets/img/3_minimizeButton.png');
-	disabledSkin:  Embed('assets/img/3_minimizeButton.png');
-}
-
-
 .resizeHndlr 
 {
 	upSkin:        Embed('assets/img/resizeHandler.png');
@@ -178,3 +180,8 @@ Button
 	downSkin:      Embed('assets/img/resizeHandler.png');
 	disabledSkin:  Embed('assets/img/resizeHandler.png');
 }
+
+LayoutContainer {
+  horizontalGap: 10;
+}
+

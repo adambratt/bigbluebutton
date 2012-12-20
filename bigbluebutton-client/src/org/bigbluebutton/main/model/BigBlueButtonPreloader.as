@@ -30,8 +30,8 @@ package org.bigbluebutton.main.model
 		public function BigBlueButtonPreloader()
 		{
 			super();
-			downloadingLabel = "Downloading BigBlueButton main...";
-			initializingLabel = "BigBlueButton starting...";
+			downloadingLabel = "Downloading Marketfy main...";
+			initializingLabel = "Marketfy Webinars starting...";
 			MINIMUM_DISPLAY_TIME = 0;
 		}
 		
